@@ -3,7 +3,7 @@ from cStringIO import StringIO
 from flask import Flask, send_file
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/docker.tar.gz")
 def index():
     ecr = boto3.client('ecr')
     data = {
