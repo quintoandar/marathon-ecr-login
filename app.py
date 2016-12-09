@@ -21,6 +21,10 @@ def index():
         out.close()
     
     return send_file("/tmp/docker.tar.gz", as_attachment=True)
+    
+@app.route("/health")
+def health():
+    return "Yey!"
 
 if __name__ == "__main__":
     app.run(debug=True)
